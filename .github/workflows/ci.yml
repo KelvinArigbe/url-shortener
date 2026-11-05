@@ -41,7 +41,8 @@ jobs:
 
       - name: Scan source with Trivy
         uses: aquasecurity/trivy-action@v0.36.0
-        with:
+- name: Run automated tests
+  run: python -m pytest -v        with:
           scan-type: fs
           scan-ref: .
           scanners: vuln,secret
