@@ -1,3 +1,5 @@
+![GitHub Actions](https://github.com/KelvinArigbe/url-shortener/actions/workflows/ci.yml/badge.svg?branch=main)
+
 # URL Shortener — Cloud-Native DevSecOps Project
 
 A containerised URL Shortener API built with Python Flask, PostgreSQL and Redis, deployed on Kubernetes and integrated with an automated DevSecOps pipeline using GitHub Actions, Trivy and GitHub Container Registry (GHCR).
