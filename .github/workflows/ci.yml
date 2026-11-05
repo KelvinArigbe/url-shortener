@@ -8,9 +8,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
- permissions:
+permissions:
   contents: read
-  packages: write 
+  packages: write
 
 jobs:
   build-and-scan:
