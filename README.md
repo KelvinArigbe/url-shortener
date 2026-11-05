@@ -17,6 +17,7 @@ flowchart TB
     T --> H[GitHub Container Registry]
     H --> K[Kubernetes - Minikube]
     K --> A
+```
 
 The application uses a modular architecture:
 
