@@ -4,6 +4,20 @@ A containerised URL Shortener API built with Python Flask, PostgreSQL and Redis,
 
 ## Architecture
 
+```mermaid
+flowchart TB
+    U[User] --> N[Nginx Reverse Proxy]
+    N --> A[Flask REST API]
+
+    A --> P[(PostgreSQL)]
+    A --> R[(Redis Cache)]
+
+    G[GitHub Repository] --> C[GitHub Actions CI/CD]
+    C --> T[Trivy Security Scanning]
+    T --> H[GitHub Container Registry]
+    H --> K[Kubernetes - Minikube]
+    K --> A
+
 The application uses a modular architecture:
 
 - **Flask:** REST API and URL redirection.
