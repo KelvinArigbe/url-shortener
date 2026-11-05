@@ -33,6 +33,9 @@ jobs:
       - name: Validate Python syntax
         run: python -m compileall -q app.py
 
+      - name: Run automated tests
+        run: python -m pytest -v
+
       - name: Check dependencies
         run: pip check
 
@@ -41,8 +44,7 @@ jobs:
 
       - name: Scan source with Trivy
         uses: aquasecurity/trivy-action@v0.36.0
-- name: Run automated tests
-  run: python -m pytest -v        with:
+        with:
           scan-type: fs
           scan-ref: .
           scanners: vuln,secret
